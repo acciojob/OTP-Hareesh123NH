@@ -1,1 +1,76 @@
 /*  your css code here. If applicable */
+/*  your css code here. If applicable */
+/* Overall container styling */
+.verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and subtext styling */
+#verification_heading {
+    font-size: 28px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#verification_subtext {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Code input container and individual input styling */
+.code-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Spacing between the input fields */
+}
+
+.code {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #555;
+    background-color: #f9f9f9;
+}
+
+/* Focus effect for input fields */
+.code:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder styling */
+.code::placeholder {
+    color: #ccc;
+}
+
+
+/* Message styling */
+.verification-message {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
