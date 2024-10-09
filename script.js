@@ -1,28 +1,25 @@
-// Get all input fields with the class "code"
 const inputs = document.querySelectorAll(".code");
 
 inputs.forEach((input, i) => {
-    input.addEventListener("keydown", (e) => {
-        // Check for numeric key input
-        if (/^[0-9]$/.test(e.key)) {
-            // If the input is valid, move to the next field after the current one is filled
-            inputs[i].value = '';  // Reset the current value to only accept one digit
-            setTimeout(() => {
-                if (i < inputs.length - 1) {
-                    inputs[i + 1].focus(); // Move to the next input
-                }
-            }, 100);
-        } else if (e.key === "Backspace") {
-            // Handle backspace, move to the previous field if necessary
-            if (input.value === '' && i > 0) {
-                inputs[i - 1].focus(); // Move to the previous input
+    input.addEventListener("input", (e) => {
+        if (/^[0-9]$/.test(e.target.value)) {
+            // Move to the next input after valid input
+            if (i < inputs.length - 1) {
+                inputs[i + 1].focus();
             }
-        } else {
-            e.preventDefault(); // Prevent non-numeric keys
         }
     });
 
-    // Allow navigation with left/right arrow keys
+    input.addEventListener("keydown", (e) => {
+        // Handle backspace: Move to the previous input
+        if (e.key === "Backspace" && input.value === '') {
+            if (i > 0) {
+                inputs[i - 1].focus();
+            }
+        }
+    });
+
+    // Optional: Allow arrow navigation
     input.addEventListener("keyup", (e) => {
         if (e.key === "ArrowLeft" && i > 0) {
             inputs[i - 1].focus();
