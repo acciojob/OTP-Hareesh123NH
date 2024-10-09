@@ -1,5 +1,3 @@
-/*  your css code here. If applicable */
-/*  your css code here. If applicable */
 /* Overall container styling */
 .verification-container {
     display: flex;
@@ -61,7 +59,6 @@
     color: #ccc;
 }
 
-
 /* Message styling */
 .verification-message {
     margin-top: 30px;
@@ -73,4 +70,3 @@
     border-radius: 8px;
     max-width: 500px;
 }
-
